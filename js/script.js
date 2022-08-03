@@ -23,8 +23,10 @@ function creaMembro(name, role, image) {
     }
     return membro;
 }
+
 // creo Array usando la funzione che crea un membro
 const membriTeam = [
+
     creaMembro('Wayne Bernett', 'Founder & CEO', 'wayne-barnett-founder-ceo.jpg'),
     creaMembro('Angela Caroll', 'Chief Editor', 'angela-caroll-chief-editor.jpg'),
     creaMembro('Walter Gordon', 'Office Manager', 'walter-gordon-office-manager.jpg'),
