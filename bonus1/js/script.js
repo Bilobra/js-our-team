@@ -13,14 +13,14 @@ console.log('our team')
 // Scott Estrada	Developer	            scott-estrada-developer.jpg
 // Barbara Ramos	Graphic Designer	    barbara-ramos-graphic-designer.jpg
 
-const imgTeam = [
-    './img/wayne-barnett-founder-ceo.jpg',
-    './img/angela-caroll-chief-editor.jpg',
-    './img/walter-gordon-office-manager.jpg',
-    './img/angela-lopez-social-media-manager.jpg',
-    './img/scott-estrada-developer.jpg',
-    './img/barbara-ramos-graphic-designer.jpg',
-]
+// const imgTeam = [
+//     './img/wayne-barnett-founder-ceo.jpg',
+//     './img/angela-caroll-chief-editor.jpg',
+//     './img/walter-gordon-office-manager.jpg',
+//     './img/angela-lopez-social-media-manager.jpg',
+//     './img/scott-estrada-developer.jpg',
+//     './img/barbara-ramos-graphic-designer.jpg',
+// ]
 
 
 // CREO FUNZIONE CHE MI STAMPA UN MEMBRO
@@ -29,7 +29,7 @@ function creaMembro(name, role, image) {
     const membro = {
         name: name,
         role: role,
-        image: image
+        image: `<img src = "${image}" alt="">`
     }
     return membro;
 }
@@ -37,12 +37,12 @@ function creaMembro(name, role, image) {
 // creo Array usando la funzione che crea un membro
 const membriTeam = [
 
-    creaMembro('Wayne Bernett', 'Founder & CEO', 'wayne-barnett-founder-ceo.jpg'),
-    creaMembro('Angela Caroll', 'Chief Editor', 'angela-caroll-chief-editor.jpg'),
-    creaMembro('Walter Gordon', 'Office Manager', 'walter-gordon-office-manager.jpg'),
-    creaMembro('Angela Lopez', 'Social Media Manager', 'angela-lopez-social-media-manager.jpg'),
-    creaMembro('Scott Estrada', 'Develoer', 'scott-estrada-developer.jpg'),
-    creaMembro('Barbara Ramos', 'Graphic Designer', ' barbara-ramos-graphic-designer.jpg'),
+    creaMembro('Wayne Bernett', 'Founder & CEO', './img/wayne-barnett-founder-ceo.jpg'),
+    creaMembro('Angela Caroll', 'Chief Editor', './img/angela-caroll-chief-editor.jpg'),
+    creaMembro('Walter Gordon', 'Office Manager', './img/walter-gordon-office-manager.jpg'),
+    creaMembro('Angela Lopez', 'Social Media Manager', './img/angela-lopez-social-media-manager.jpg'),
+    creaMembro('Scott Estrada', 'Develoer', './img/scott-estrada-developer.jpg'),
+    creaMembro('Barbara Ramos', 'Graphic Designer', './img/barbara-ramos-graphic-designer.jpg'),
 
 ]
 // stampo in console array
@@ -71,11 +71,11 @@ function onLoop(membro) {
 membriTeam.forEach(onLoop)
 
 
-for (let i = 0; i < imgTeam.length; i++) {
-    const src = imgTeam[i];
-    const img = `<img src = ${src} alt="">`
-    teamListEl.innerHTML += img
-}
+// for (let i = 0; i < imgTeam.length; i++) {
+//     const src = imgTeam[i];
+//     const img = `<img src = ${src} alt="">`
+//     teamListEl.innerHTML += img
+// }
 
 // posso mettere una funzione dentro i parametri di una funzione ? riga 28
-// che paramentri posso mettere a riga 74 per creare funzione creaimg?
+// che paramentri posso mettere a riga 74 per creare funzione
