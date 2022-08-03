@@ -23,6 +23,7 @@ function creaMembro(name, role, image) {
     }
     return membro;
 }
+// creo Array usando la funzione che crea un membro
 const membriTeam = [
     creaMembro('Wayne Bernett', 'Founder & CEO', 'wayne-barnett-founder-ceo.jpg'),
     creaMembro('Angela Caroll', 'Chief Editor', 'angela-caroll-chief-editor.jpg'),
@@ -32,9 +33,9 @@ const membriTeam = [
     creaMembro('Barbara Ramos', 'Graphic Designer', ' barbara-ramos-graphic-designer.jpg'),
 
 ]
-
+// stampo in console array
 console.log(membriTeam)
-
+// per ogni membro stampo nome, ruolo, img
 for (let i = 0; i < membriTeam.length; i++){
     const membroCorrente = membriTeam[i]
     const nomeMembro = membroCorrente.name
@@ -44,3 +45,15 @@ for (let i = 0; i < membriTeam.length; i++){
     console.log(nomeMembro, roleMembro, imgMembro)
 }
 
+// estrapolo ul per creare list item
+const teamListEl = document.querySelector('.team-list');
+
+
+// creo funzione per stampare in dom
+// dove stampo nel dom il mio oggetto con le proprietà
+function onLoop(membro){
+    teamListEl.innerHTML += `<li>${membro.name} ${membro.role} ${membro.image}</li>`
+    
+}
+// per ogni entità dell'array membriTeam , uso la funzione onLoop
+membriTeam.forEach(onLoop)
