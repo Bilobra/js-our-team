@@ -29,7 +29,7 @@ function creaMembro(name, role, image) {
     const membro = {
         name: name,
         role: role,
-        image: image,
+        image: image
     }
     return membro;
 }
@@ -77,3 +77,5 @@ for (let i = 0; i < imgTeam.length; i++) {
     teamListEl.innerHTML += img
 }
 
+// posso mettere una funzione dentro i parametri di una funzione ? riga 28
+// che paramentri posso mettere a riga 74 per creare funzione creaimg?
